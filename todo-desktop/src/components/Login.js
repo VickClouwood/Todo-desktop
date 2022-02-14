@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleLogin from "react-google-login";
 
-function Home() {
+function Login() {
   const handleFailure = (result) => {
     alert(result);
   };
@@ -12,7 +12,8 @@ function Home() {
   return (
     <>
       <header className="App-header">
-        <h1>Todo Desktop</h1>
+        <h1>Tasks Desktop</h1>
+        <h3>A desktop App for Google Tasks</h3>
         <div>
           <GoogleLogin
             clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
@@ -27,4 +28,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Login;
