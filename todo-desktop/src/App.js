@@ -1,8 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./components/Login";
-import Todo from "./components/Todo";
-import ErrorPage from "./components/ErrorPage";
+import Login from "./components/Login";
+import Kanban from "./components/Kanban";
 
 function App() {
   // redirect to todo after successful login
@@ -15,16 +14,15 @@ function App() {
     <Router>
       <nav>
         <Link className="nav-links-login" to="/login">
-          Home
+          Login Page
         </Link>
-        <Link className="nav-links-todo" to="/todo">
-          Todo
+        <Link className="nav-links-todo" to="/kanban">
+          Kanban
         </Link>
       </nav>
       <Routes>
         <Route path="/Login" element={<Login />} />
-        <Route path="/Todo" element={<Todo />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="/Kanban" element={<Kanban />} />
       </Routes>
     </Router>
   );
